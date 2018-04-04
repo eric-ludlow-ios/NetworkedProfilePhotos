@@ -17,14 +17,110 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-9H-HfK">
+                                <rect key="frame" x="149" y="42" width="76" height="34"/>
+                                <color key="backgroundColor" red="0.001052846666" green="0.49585682149999999" blue="0.64601773019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO0-Mx-Zjq">
+                                <rect key="frame" x="151" y="44" width="72" height="30"/>
+                                <color key="backgroundColor" red="0.001052846666" green="0.49585682149999999" blue="0.64601773019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="H8x-P6-SjI"/>
+                                </constraints>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9ho-wI-Ri8" kind="show" id="AZI-Qw-COs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89011794328689575" green="0.89024609327316284" blue="0.89008986949920654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVI-9H-HfK" firstAttribute="bottom" secondItem="CO0-Mx-Zjq" secondAttribute="bottom" constant="2" id="AqK-Jk-e1S"/>
+                            <constraint firstItem="ZVI-9H-HfK" firstAttribute="trailing" secondItem="CO0-Mx-Zjq" secondAttribute="trailing" constant="2" id="Dod-fA-9Ng"/>
+                            <constraint firstItem="CO0-Mx-Zjq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Ryt-1Z-SLY"/>
+                            <constraint firstItem="CO0-Mx-Zjq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S4N-UN-AKp"/>
+                            <constraint firstItem="ZVI-9H-HfK" firstAttribute="top" secondItem="CO0-Mx-Zjq" secondAttribute="top" constant="-2" id="SVx-eK-K1U"/>
+                            <constraint firstItem="ZVI-9H-HfK" firstAttribute="leading" secondItem="CO0-Mx-Zjq" secondAttribute="leading" constant="-2" id="ktL-VP-LAR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qrn-E8-iv0"/>
+                    <navigationItem key="navigationItem" id="Qrn-E8-iv0">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="edt-qI-0Hz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonBackground" destination="ZVI-9H-HfK" id="meu-or-xpZ"/>
+                        <outlet property="settingsButton" destination="CO0-Mx-Zjq" id="BDc-dC-yvS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="a0R-vD-zgY">
+            <objects>
+                <viewController id="9ho-wI-Ri8" customClass="SettingsViewController" customModule="NetworkedProfilePhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hUe-gN-Mkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myK-Xp-osw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYl-hw-nZ1">
+                                        <rect key="frame" x="56" y="8" width="263" height="29"/>
+                                        <segments>
+                                            <segment title="Basics"/>
+                                            <segment title="Preferences"/>
+                                            <segment title="Photos"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.001052846666" green="0.49585682149999999" blue="0.64601773019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GLE-U9-XyW"/>
+                                    <constraint firstItem="aYl-hw-nZ1" firstAttribute="centerX" secondItem="myK-Xp-osw" secondAttribute="centerX" id="PGO-iV-ZZh"/>
+                                    <constraint firstItem="aYl-hw-nZ1" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="top" constant="8" id="VDx-gE-gGE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2O-Sk-9AU" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                <rect key="frame" x="123" y="53" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="ACc-9r-Xpd"/>
+                                    <constraint firstAttribute="height" constant="128" id="ioy-iY-RHr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89011794330000005" green="0.89024609330000004" blue="0.89008986950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z2O-Sk-9AU" firstAttribute="top" secondItem="wWx-Ug-fIq" secondAttribute="top" constant="53" id="S9p-R2-D8F"/>
+                            <constraint firstItem="myK-Xp-osw" firstAttribute="top" secondItem="wWx-Ug-fIq" secondAttribute="top" id="TQj-Z8-VIi"/>
+                            <constraint firstItem="myK-Xp-osw" firstAttribute="leading" secondItem="wWx-Ug-fIq" secondAttribute="leading" id="WGg-Ri-y81"/>
+                            <constraint firstItem="wWx-Ug-fIq" firstAttribute="trailing" secondItem="myK-Xp-osw" secondAttribute="trailing" id="ZfX-8l-OVe"/>
+                            <constraint firstItem="z2O-Sk-9AU" firstAttribute="centerX" secondItem="wWx-Ug-fIq" secondAttribute="centerX" id="grI-fh-fgw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wWx-Ug-fIq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="YEG-YP-pbJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="av0-xe-UOc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoView" destination="z2O-Sk-9AU" id="nfu-u8-qVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xp-q4-Lsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.5999999999999" y="117.39130434782609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="In0-1A-T7h">
@@ -34,6 +130,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8UP-KW-wXO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0010528466664254665" green="0.49585682153701782" blue="0.64601773023605347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,4 +149,7 @@
             <point key="canvasLocation" x="-279" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="benfolds" width="247" height="269"/>
+    </resources>
 </document>
