@@ -12,6 +12,7 @@
 		07B3B0832074379A0024436C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B3B0812074379A0024436C /* Main.storyboard */; };
 		07B3B0852074379A0024436C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B3B0842074379A0024436C /* Assets.xcassets */; };
 		07B3B0882074379A0024436C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B3B0862074379A0024436C /* LaunchScreen.storyboard */; };
+		07B3B0902074467E0024436C /* UIColor+NPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3B08F2074467E0024436C /* UIColor+NPP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		07B3B0842074379A0024436C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B3B0872074379A0024436C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07B3B0892074379A0024436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B3B08F2074467E0024436C /* UIColor+NPP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+NPP.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				07B3B07D2074379A0024436C /* AppDelegate.swift */,
 				07B3B07F2074379A0024436C /* ViewController.swift */,
+				07B3B08F2074467E0024436C /* UIColor+NPP.swift */,
 				07B3B0812074379A0024436C /* Main.storyboard */,
 				07B3B0842074379A0024436C /* Assets.xcassets */,
 				07B3B0862074379A0024436C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				07B3B0802074379A0024436C /* ViewController.swift in Sources */,
 				07B3B07E2074379A0024436C /* AppDelegate.swift in Sources */,
+				07B3B0902074467E0024436C /* UIColor+NPP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
