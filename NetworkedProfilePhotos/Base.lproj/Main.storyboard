@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,25 +88,122 @@
                                     <constraint firstItem="aYl-hw-nZ1" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="top" constant="8" id="VDx-gE-gGE"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2O-Sk-9AU" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
-                                <rect key="frame" x="123" y="53" width="128" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-p0-vbD">
+                                <rect key="frame" x="0.0" y="45" width="375" height="558"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wt-0f-N77">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-5Z-zFz" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="12" width="230" height="230"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="eKR-5Z-zFz" secondAttribute="height" multiplier="1:1" id="69V-JP-dTg"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkJ-XL-uRy" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="254" y="12" width="109" height="109"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vkJ-XL-uRy" secondAttribute="height" multiplier="1:1" id="GKt-YJ-kA4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-8h-fwR" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="254" y="133" width="109" height="109"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1zf-8h-fwR" secondAttribute="height" multiplier="1:1" id="yaa-mr-U4R"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-ON-SA2" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="254" width="109" height="109"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="F2c-ON-SA2" secondAttribute="height" multiplier="1:1" id="rVP-at-6cF"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xaj-QU-Kl4" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="133" y="254" width="109" height="109"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xaj-QU-Kl4" secondAttribute="height" multiplier="1:1" id="7K9-D6-beq"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OK-BZ-GsW" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
+                                                <rect key="frame" x="254" y="254" width="109" height="109"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9OK-BZ-GsW" secondAttribute="height" multiplier="1:1" id="i0E-O5-X2D"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="PROFILE INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acG-I5-zwA">
+                                                <rect key="frame" x="12" y="387" width="109.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="9OK-BZ-GsW" firstAttribute="leading" secondItem="1zf-8h-fwR" secondAttribute="leading" id="1n0-dt-jaa"/>
+                                            <constraint firstItem="Xaj-QU-Kl4" firstAttribute="trailing" secondItem="eKR-5Z-zFz" secondAttribute="trailing" id="2YU-Co-6gQ"/>
+                                            <constraint firstItem="Xaj-QU-Kl4" firstAttribute="top" secondItem="9OK-BZ-GsW" secondAttribute="top" id="3nx-Zz-N2x"/>
+                                            <constraint firstAttribute="trailing" secondItem="vkJ-XL-uRy" secondAttribute="trailing" constant="12" id="B7z-7N-1ry"/>
+                                            <constraint firstItem="eKR-5Z-zFz" firstAttribute="top" secondItem="8Wt-0f-N77" secondAttribute="top" constant="12" id="C66-Me-qiP"/>
+                                            <constraint firstItem="1zf-8h-fwR" firstAttribute="bottom" secondItem="eKR-5Z-zFz" secondAttribute="bottom" id="DEo-Uz-H1f"/>
+                                            <constraint firstAttribute="bottom" secondItem="acG-I5-zwA" secondAttribute="bottom" constant="16" id="FbZ-qH-E9w"/>
+                                            <constraint firstItem="acG-I5-zwA" firstAttribute="top" secondItem="F2c-ON-SA2" secondAttribute="bottom" constant="24" id="Fj3-GC-bBM"/>
+                                            <constraint firstItem="F2c-ON-SA2" firstAttribute="top" secondItem="9OK-BZ-GsW" secondAttribute="top" id="PO0-Yt-ib6"/>
+                                            <constraint firstItem="vkJ-XL-uRy" firstAttribute="top" secondItem="eKR-5Z-zFz" secondAttribute="top" id="Rzg-Jj-ZL2"/>
+                                            <constraint firstItem="F2c-ON-SA2" firstAttribute="leading" secondItem="eKR-5Z-zFz" secondAttribute="leading" id="Uak-VJ-NVh"/>
+                                            <constraint firstItem="vkJ-XL-uRy" firstAttribute="leading" secondItem="eKR-5Z-zFz" secondAttribute="trailing" constant="12" id="YnD-qZ-Ju8"/>
+                                            <constraint firstItem="9OK-BZ-GsW" firstAttribute="top" secondItem="1zf-8h-fwR" secondAttribute="bottom" constant="12" id="d1H-pB-bhk"/>
+                                            <constraint firstItem="F2c-ON-SA2" firstAttribute="bottom" secondItem="9OK-BZ-GsW" secondAttribute="bottom" id="gSN-mE-jxh"/>
+                                            <constraint firstItem="1zf-8h-fwR" firstAttribute="leading" secondItem="vkJ-XL-uRy" secondAttribute="leading" id="kj6-iQ-gYk"/>
+                                            <constraint firstItem="1zf-8h-fwR" firstAttribute="trailing" secondItem="vkJ-XL-uRy" secondAttribute="trailing" id="s0c-HP-WO5"/>
+                                            <constraint firstItem="acG-I5-zwA" firstAttribute="leading" secondItem="F2c-ON-SA2" secondAttribute="leading" id="sTH-0h-9Hq"/>
+                                            <constraint firstItem="1zf-8h-fwR" firstAttribute="top" secondItem="vkJ-XL-uRy" secondAttribute="bottom" constant="12" id="tyy-Y7-T48"/>
+                                            <constraint firstItem="eKR-5Z-zFz" firstAttribute="leading" secondItem="8Wt-0f-N77" secondAttribute="leading" constant="12" id="xZn-Sm-Uha"/>
+                                            <constraint firstItem="9OK-BZ-GsW" firstAttribute="trailing" secondItem="1zf-8h-fwR" secondAttribute="trailing" id="zrx-uC-hmV"/>
+                                            <constraint firstItem="Xaj-QU-Kl4" firstAttribute="bottom" secondItem="9OK-BZ-GsW" secondAttribute="bottom" id="zup-pS-pa7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="ACc-9r-Xpd"/>
-                                    <constraint firstAttribute="height" constant="128" id="ioy-iY-RHr"/>
+                                    <constraint firstItem="8Wt-0f-N77" firstAttribute="top" secondItem="PsP-p0-vbD" secondAttribute="top" id="A4l-yJ-uNY"/>
+                                    <constraint firstItem="8Wt-0f-N77" firstAttribute="leading" secondItem="PsP-p0-vbD" secondAttribute="leading" id="ECL-mk-Euk"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Wt-0f-N77" secondAttribute="trailing" id="Pxm-2g-2cn"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.89011794330000005" green="0.89024609330000004" blue="0.89008986950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z2O-Sk-9AU" firstAttribute="top" secondItem="wWx-Ug-fIq" secondAttribute="top" constant="53" id="S9p-R2-D8F"/>
+                            <constraint firstItem="PsP-p0-vbD" firstAttribute="leading" secondItem="wWx-Ug-fIq" secondAttribute="leading" id="GSP-oZ-5Eh"/>
                             <constraint firstItem="myK-Xp-osw" firstAttribute="top" secondItem="wWx-Ug-fIq" secondAttribute="top" id="TQj-Z8-VIi"/>
                             <constraint firstItem="myK-Xp-osw" firstAttribute="leading" secondItem="wWx-Ug-fIq" secondAttribute="leading" id="WGg-Ri-y81"/>
                             <constraint firstItem="wWx-Ug-fIq" firstAttribute="trailing" secondItem="myK-Xp-osw" secondAttribute="trailing" id="ZfX-8l-OVe"/>
-                            <constraint firstItem="z2O-Sk-9AU" firstAttribute="centerX" secondItem="wWx-Ug-fIq" secondAttribute="centerX" id="grI-fh-fgw"/>
+                            <constraint firstItem="PsP-p0-vbD" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="bottom" id="kJV-tn-K0L"/>
+                            <constraint firstItem="wWx-Ug-fIq" firstAttribute="bottom" secondItem="PsP-p0-vbD" secondAttribute="bottom" id="mua-Tx-PkN"/>
+                            <constraint firstItem="wWx-Ug-fIq" firstAttribute="trailing" secondItem="PsP-p0-vbD" secondAttribute="trailing" id="wmN-Ce-7wy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wWx-Ug-fIq"/>
                     </view>
@@ -114,9 +212,6 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="photoView" destination="z2O-Sk-9AU" id="nfu-u8-qVP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xp-q4-Lsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
