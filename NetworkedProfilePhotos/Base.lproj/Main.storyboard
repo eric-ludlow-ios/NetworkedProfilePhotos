@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myK-Xp-osw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myK-Xp-osw" userLabel="segment view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYl-hw-nZ1">
@@ -79,6 +79,9 @@
                                             <segment title="Photos"/>
                                         </segments>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="controlValueChanged:" destination="9ho-wI-Ri8" eventType="valueChanged" id="Abg-Gs-jCs"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.001052846666" green="0.49585682149999999" blue="0.64601773019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,6 +91,18 @@
                                     <constraint firstItem="aYl-hw-nZ1" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="top" constant="8" id="VDx-gE-gGE"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUa-rW-OFY">
+                                <rect key="frame" x="149" y="109" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-bx-r5j">
+                                <rect key="frame" x="128" y="109" width="118.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-p0-vbD">
                                 <rect key="frame" x="0.0" y="45" width="375" height="558"/>
                                 <subviews>
@@ -199,13 +214,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.89011794330000005" green="0.89024609330000004" blue="0.89008986950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zUa-rW-OFY" firstAttribute="centerX" secondItem="wWx-Ug-fIq" secondAttribute="centerX" id="00g-aF-6Pt"/>
                             <constraint firstItem="PsP-p0-vbD" firstAttribute="leading" secondItem="wWx-Ug-fIq" secondAttribute="leading" id="GSP-oZ-5Eh"/>
                             <constraint firstItem="myK-Xp-osw" firstAttribute="top" secondItem="wWx-Ug-fIq" secondAttribute="top" id="TQj-Z8-VIi"/>
                             <constraint firstItem="myK-Xp-osw" firstAttribute="leading" secondItem="wWx-Ug-fIq" secondAttribute="leading" id="WGg-Ri-y81"/>
+                            <constraint firstItem="VaU-bx-r5j" firstAttribute="centerX" secondItem="wWx-Ug-fIq" secondAttribute="centerX" id="Yit-RU-JrW"/>
                             <constraint firstItem="wWx-Ug-fIq" firstAttribute="trailing" secondItem="myK-Xp-osw" secondAttribute="trailing" id="ZfX-8l-OVe"/>
+                            <constraint firstItem="zUa-rW-OFY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wWx-Ug-fIq" secondAttribute="leading" constant="32" id="grj-NF-mGW"/>
+                            <constraint firstItem="zUa-rW-OFY" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="bottom" constant="64" id="jBl-xf-aK6"/>
                             <constraint firstItem="PsP-p0-vbD" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="bottom" id="kJV-tn-K0L"/>
                             <constraint firstItem="wWx-Ug-fIq" firstAttribute="bottom" secondItem="PsP-p0-vbD" secondAttribute="bottom" id="mua-Tx-PkN"/>
+                            <constraint firstItem="VaU-bx-r5j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wWx-Ug-fIq" secondAttribute="leading" constant="32" id="nrh-Pi-oeL"/>
                             <constraint firstItem="wWx-Ug-fIq" firstAttribute="trailing" secondItem="PsP-p0-vbD" secondAttribute="trailing" id="wmN-Ce-7wy"/>
+                            <constraint firstItem="VaU-bx-r5j" firstAttribute="top" secondItem="myK-Xp-osw" secondAttribute="bottom" constant="64" id="ySa-Ka-9nK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wWx-Ug-fIq"/>
                     </view>
@@ -215,9 +236,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="basicsLabel" destination="zUa-rW-OFY" id="5hU-u2-fr0"/>
                         <outlet property="bioTextView" destination="1Wk-Zy-x0K" id="oM3-M6-MRi"/>
                         <outlet property="countLabel" destination="qpy-dh-RTJ" id="eF1-wZ-m3K"/>
                         <outlet property="photosProfileView" destination="PsP-p0-vbD" id="Hga-OK-yRv"/>
+                        <outlet property="preferencesLabel" destination="VaU-bx-r5j" id="otD-7F-ZUL"/>
                         <outletCollection property="photoViews" destination="eKR-5Z-zFz" collectionClass="NSMutableArray" id="AaW-Dz-naO"/>
                         <outletCollection property="photoViews" destination="vkJ-XL-uRy" collectionClass="NSMutableArray" id="Vi2-ba-pQY"/>
                         <outletCollection property="photoViews" destination="1zf-8h-fwR" collectionClass="NSMutableArray" id="Qj8-r6-NQx"/>

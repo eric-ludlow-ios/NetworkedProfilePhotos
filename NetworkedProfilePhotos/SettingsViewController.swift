@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var basicsLabel: UILabel!
+    @IBOutlet weak var preferencesLabel: UILabel!
     @IBOutlet weak var photosProfileView: UIView!
     
     @IBOutlet var photoViews: [PhotoView]!
@@ -50,6 +52,17 @@ class SettingsViewController: UIViewController {
                 }
             }
         }
+        setView(for: 0)
+    }
+    
+    @IBAction func controlValueChanged(_ sender: UISegmentedControl) {
+        setView(for: sender.selectedSegmentIndex)
+    }
+    
+    private func setView(for index: Int) {
+        basicsLabel.isHidden = index != 0
+        preferencesLabel.isHidden = index != 1
+        photosProfileView.isHidden = index != 2
     }
 }
 
@@ -58,7 +71,10 @@ extension SettingsViewController: PhotoViewDelegate {
         guard let user = user else { return }
         
         countLabel.text = "\(user.id + 1) / \(users.count)"
+        bioTextView.isScrollEnabled = false
         bioTextView.text = user.bio
+        bioTextView.contentOffset = .zero
+        bioTextView.isScrollEnabled = true
     }
     
     func imageLongSelected() {
