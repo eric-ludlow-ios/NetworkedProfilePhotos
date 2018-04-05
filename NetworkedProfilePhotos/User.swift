@@ -22,17 +22,17 @@ class User: Codable {
     
     var avatar: UIImage? = nil
     
-    func fetchAvatar(completion: @escaping (Bool, NSError?) -> Void) {
+    func fetchAvatar(completion: ((Bool, NSError?) -> Void)?) {
         URLSession.shared.dataTask(with: avatarUrl) { (data, response, error) in
             DispatchQueue.main.async {
                 if let error = error {
-                    completion(false, error as NSError)
+                    completion?(false, error as NSError)
                 } else if let data = data {
                     self.avatar = UIImage(data: data)
-                    completion(true, nil)
+                    completion?(true, nil)
                 } else {
                     let error = NSError(domain: "Missing Data Error", code: 400, userInfo: nil)
-                    completion(false, error)
+                    completion?(false, error)
                 }
             }
         }.resume()
