@@ -100,9 +100,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="eKR-5Z-zFz" secondAttribute="height" multiplier="1:1" id="69V-JP-dTg"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkJ-XL-uRy" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
                                                 <rect key="frame" x="254" y="12" width="109" height="109"/>
@@ -110,9 +107,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="vkJ-XL-uRy" secondAttribute="height" multiplier="1:1" id="GKt-YJ-kA4"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-8h-fwR" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
                                                 <rect key="frame" x="254" y="133" width="109" height="109"/>
@@ -120,9 +114,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1zf-8h-fwR" secondAttribute="height" multiplier="1:1" id="yaa-mr-U4R"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-ON-SA2" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="254" width="109" height="109"/>
@@ -130,9 +121,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="F2c-ON-SA2" secondAttribute="height" multiplier="1:1" id="rVP-at-6cF"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xaj-QU-Kl4" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
                                                 <rect key="frame" x="133" y="254" width="109" height="109"/>
@@ -140,9 +128,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Xaj-QU-Kl4" secondAttribute="height" multiplier="1:1" id="7K9-D6-beq"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OK-BZ-GsW" customClass="PhotoView" customModule="NetworkedProfilePhotos" customModuleProvider="target">
                                                 <rect key="frame" x="254" y="254" width="109" height="109"/>
@@ -150,9 +135,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9OK-BZ-GsW" secondAttribute="height" multiplier="1:1" id="i0E-O5-X2D"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="benfolds"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="PROFILE INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acG-I5-zwA">
                                                 <rect key="frame" x="12" y="387" width="109.5" height="21"/>
@@ -220,12 +202,12 @@
                         <outlet property="smallPhotoView3" destination="F2c-ON-SA2" id="fbw-xh-DAD"/>
                         <outlet property="smallPhotoView4" destination="Xaj-QU-Kl4" id="IWE-DL-5mQ"/>
                         <outlet property="smallPhotoView5" destination="9OK-BZ-GsW" id="4OI-I8-r6u"/>
-                        <outletCollection property="photoViews" destination="9OK-BZ-GsW" collectionClass="NSMutableArray" id="xyY-It-zS0"/>
-                        <outletCollection property="photoViews" destination="Xaj-QU-Kl4" collectionClass="NSMutableArray" id="mNV-cU-MZi"/>
-                        <outletCollection property="photoViews" destination="F2c-ON-SA2" collectionClass="NSMutableArray" id="yNl-xm-1jR"/>
-                        <outletCollection property="photoViews" destination="1zf-8h-fwR" collectionClass="NSMutableArray" id="QSI-cn-cR2"/>
-                        <outletCollection property="photoViews" destination="vkJ-XL-uRy" collectionClass="NSMutableArray" id="NgG-Ut-p38"/>
-                        <outletCollection property="photoViews" destination="eKR-5Z-zFz" collectionClass="NSMutableArray" id="Wyr-JR-9Ff"/>
+                        <outletCollection property="photoViews" destination="eKR-5Z-zFz" collectionClass="NSMutableArray" id="AaW-Dz-naO"/>
+                        <outletCollection property="photoViews" destination="vkJ-XL-uRy" collectionClass="NSMutableArray" id="Vi2-ba-pQY"/>
+                        <outletCollection property="photoViews" destination="1zf-8h-fwR" collectionClass="NSMutableArray" id="Qj8-r6-NQx"/>
+                        <outletCollection property="photoViews" destination="F2c-ON-SA2" collectionClass="NSMutableArray" id="gwa-YL-PQV"/>
+                        <outletCollection property="photoViews" destination="Xaj-QU-Kl4" collectionClass="NSMutableArray" id="Yar-UV-DpH"/>
+                        <outletCollection property="photoViews" destination="9OK-BZ-GsW" collectionClass="NSMutableArray" id="QpB-vL-guG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xp-q4-Lsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,7 +241,4 @@
             <point key="canvasLocation" x="-279" y="118"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="benfolds" width="247" height="269"/>
-    </resources>
 </document>

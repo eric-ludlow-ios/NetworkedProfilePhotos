@@ -19,11 +19,37 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var smallPhotoView4: PhotoView!
     @IBOutlet weak var smallPhotoView5: PhotoView!
     
+    var users: [User] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         photoViews.forEach({ $0.delegate = self })
+        
+        if let users = User.getUsers() {
+            self.users = users
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // this logic should be adjusted or moved out of `viewWillAppear` if there is ever any other way to leave this view besides popping (or dismissing) the VC
+        for (index, photoView) in photoViews.enumerated() {
+            guard users.count > index else { return }
+            
+            let user = users[index]
+            
+            if let avatar = user.avatar {
+                photoView.imageView.image = avatar
+            } else {
+                //TODO:- some kind of load indicator, for slow connections
+                user.fetchAvatar() { (_, _) in
+                    //TODO:- end load indicator
+                    photoView.imageView.image = user.avatar ?? UIImage(named: "benfolds")
+                }
+            }
+        }
     }
 }
 
