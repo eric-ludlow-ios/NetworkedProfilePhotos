@@ -212,6 +212,21 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bigPhotoView" destination="eKR-5Z-zFz" id="0n0-dn-BgY"/>
+                        <outlet property="photosProfileView" destination="PsP-p0-vbD" id="Hga-OK-yRv"/>
+                        <outlet property="smallPhotoView1" destination="vkJ-XL-uRy" id="Q8P-3s-u1G"/>
+                        <outlet property="smallPhotoView2" destination="1zf-8h-fwR" id="Eso-8a-9vH"/>
+                        <outlet property="smallPhotoView3" destination="F2c-ON-SA2" id="fbw-xh-DAD"/>
+                        <outlet property="smallPhotoView4" destination="Xaj-QU-Kl4" id="IWE-DL-5mQ"/>
+                        <outlet property="smallPhotoView5" destination="9OK-BZ-GsW" id="4OI-I8-r6u"/>
+                        <outletCollection property="photoViews" destination="9OK-BZ-GsW" collectionClass="NSMutableArray" id="xyY-It-zS0"/>
+                        <outletCollection property="photoViews" destination="Xaj-QU-Kl4" collectionClass="NSMutableArray" id="mNV-cU-MZi"/>
+                        <outletCollection property="photoViews" destination="F2c-ON-SA2" collectionClass="NSMutableArray" id="yNl-xm-1jR"/>
+                        <outletCollection property="photoViews" destination="1zf-8h-fwR" collectionClass="NSMutableArray" id="QSI-cn-cR2"/>
+                        <outletCollection property="photoViews" destination="vkJ-XL-uRy" collectionClass="NSMutableArray" id="NgG-Ut-p38"/>
+                        <outletCollection property="photoViews" destination="eKR-5Z-zFz" collectionClass="NSMutableArray" id="Wyr-JR-9Ff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xp-q4-Lsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

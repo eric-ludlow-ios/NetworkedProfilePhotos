@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PhotoViewDelegate {
+    func imageLongSelected()
+}
+
 @IBDesignable
 
 class PhotoView: UIView {
@@ -24,6 +28,8 @@ class PhotoView: UIView {
             imageView.image = image
         }
     }
+    
+    var delegate: PhotoViewDelegate?
     
     private var imageWasPressed: Bool = false
     
@@ -75,20 +81,28 @@ class PhotoView: UIView {
     }
     
     func setUpGestureRecognizer() {
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(showClearButton))
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(imageViewWasPressed))
         longPressGestureRecognizer.minimumPressDuration = 1.5
         imageView.addGestureRecognizer(longPressGestureRecognizer)
     }
     
-    @objc func showClearButton() {
+    @objc func imageViewWasPressed() {
         if !imageWasPressed {
             imageWasPressed = true
-            clearButton.alpha = 0.0
-            clearButton.isHidden = false
-            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.clearButton.alpha = 1.0
-            }, completion: nil)
+            if let delegate = delegate {
+                delegate.imageLongSelected()
+            } else {
+                showClearButton()
+            }
         }
+    }
+    
+    func showClearButton() {
+        clearButton.alpha = 0.0
+        clearButton.isHidden = false
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.clearButton.alpha = 1.0
+        }, completion: nil)
     }
     
     @IBAction func clearButtonTapped(_ sender: UIButton) {
