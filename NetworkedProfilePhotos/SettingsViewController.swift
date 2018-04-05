@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingsViewController: UIViewController {
     
@@ -55,6 +56,21 @@ class SettingsViewController: UIViewController {
         setView(for: 0)
     }
     
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        guard MFMailComposeViewController.canSendMail() else { return }
+        guard let screenshot = UIImage.screenshot(), let picture = UIImagePNGRepresentation(screenshot) else { return }
+        
+        let mailViewController = MFMailComposeViewController()
+        mailViewController.mailComposeDelegate = self
+        mailViewController.setToRecipients(["cpratt@sofi.org", "tlawson@sofi.org"])
+        mailViewController.setPreferredSendingEmailAddress("eric.ludlow.ios@gmail.com")
+        mailViewController.setSubject("Eric Ludlow's take home screenshot")
+        mailViewController.setMessageBody("Hello. Please find attached below the screenshot of the take home project. Please keep your eyes open for a follow-up email with the project.", isHTML: false)
+        mailViewController.addAttachmentData(picture, mimeType: "image/png", fileName: "screenshot")
+        
+        present(mailViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func controlValueChanged(_ sender: UISegmentedControl) {
         setView(for: sender.selectedSegmentIndex)
     }
@@ -79,5 +95,12 @@ extension SettingsViewController: PhotoViewDelegate {
     
     func imageLongSelected() {
         photoViews.forEach({ $0.showClearButton() })
+    }
+}
+
+extension SettingsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        controller.dismiss(animated: true, completion: nil)
     }
 }

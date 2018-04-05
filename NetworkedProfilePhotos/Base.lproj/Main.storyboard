@@ -233,6 +233,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="YEG-YP-pbJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="av0-xe-UOc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveTapped:" destination="9ho-wI-Ri8" id="g7H-in-mlN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
