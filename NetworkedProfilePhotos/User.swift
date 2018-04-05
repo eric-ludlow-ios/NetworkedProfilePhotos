@@ -10,10 +10,10 @@ import UIKit
 
 class User: Codable {
     enum CodingKeys: String, CodingKey {
-        case id, firstName, lastName, title, bio, avatarUrl = "avatar"
+        case idString = "id", firstName, lastName, title, bio, avatarUrl = "avatar"
     }
     
-    var id: String
+    var idString: String
     var firstName: String
     var lastName: String
     var title: String
@@ -21,6 +21,10 @@ class User: Codable {
     var avatarUrl: URL
     
     var avatar: UIImage? = nil
+    
+    var id: Int {
+        return Int(idString) ?? -1
+    }
     
     func fetchAvatar(completion: ((Bool, NSError?) -> Void)?) {
         URLSession.shared.dataTask(with: avatarUrl) { (data, response, error) in

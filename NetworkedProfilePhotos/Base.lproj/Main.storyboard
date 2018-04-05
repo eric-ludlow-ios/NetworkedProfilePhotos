@@ -215,15 +215,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bigPhotoView" destination="eKR-5Z-zFz" id="0n0-dn-BgY"/>
                         <outlet property="bioTextView" destination="1Wk-Zy-x0K" id="oM3-M6-MRi"/>
                         <outlet property="countLabel" destination="qpy-dh-RTJ" id="eF1-wZ-m3K"/>
                         <outlet property="photosProfileView" destination="PsP-p0-vbD" id="Hga-OK-yRv"/>
-                        <outlet property="smallPhotoView1" destination="vkJ-XL-uRy" id="Q8P-3s-u1G"/>
-                        <outlet property="smallPhotoView2" destination="1zf-8h-fwR" id="Eso-8a-9vH"/>
-                        <outlet property="smallPhotoView3" destination="F2c-ON-SA2" id="fbw-xh-DAD"/>
-                        <outlet property="smallPhotoView4" destination="Xaj-QU-Kl4" id="IWE-DL-5mQ"/>
-                        <outlet property="smallPhotoView5" destination="9OK-BZ-GsW" id="4OI-I8-r6u"/>
                         <outletCollection property="photoViews" destination="eKR-5Z-zFz" collectionClass="NSMutableArray" id="AaW-Dz-naO"/>
                         <outletCollection property="photoViews" destination="vkJ-XL-uRy" collectionClass="NSMutableArray" id="Vi2-ba-pQY"/>
                         <outletCollection property="photoViews" destination="1zf-8h-fwR" collectionClass="NSMutableArray" id="Qj8-r6-NQx"/>
