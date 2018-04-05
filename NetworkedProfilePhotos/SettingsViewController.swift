@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var photosProfileView: UIView!
+    
     @IBOutlet var photoViews: [PhotoView]!
     @IBOutlet weak var bigPhotoView: PhotoView!
     @IBOutlet weak var smallPhotoView1: PhotoView!
@@ -19,16 +20,25 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var smallPhotoView4: PhotoView!
     @IBOutlet weak var smallPhotoView5: PhotoView!
     
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var bioTextView: UITextView!
+    
     var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bioTextView.text = ""
         photoViews.forEach({ $0.delegate = self })
         
         if let users = User.getUsers() {
             self.users = users
         }
+        
+        guard users.count > 0 else { return }
+        
+        countLabel.text = "1 / \(users.count)"
+        bioTextView.text = users[0].bio
     }
     
     override func viewWillAppear(_ animated: Bool) {
